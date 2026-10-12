@@ -123,8 +123,6 @@ Online-Examination-System/
 └── README.md
 ```
 
-*Note: The architecture illustrates the logical separation between the frontend, backend, and database. The actual source folders may be organized differently in the repository.*
-
 ## 🧩 Architecture Components
 
 - **Frontend:** React components provide the user interface for authentication, examinations, question management, and results.
