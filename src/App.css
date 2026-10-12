@@ -1,0 +1,399 @@
+
+/* =========================
+   GLOBAL STYLES
+========================= */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f3f6fb;
+  color: #1e293b;
+}
+
+a {
+  text-decoration: none;
+}
+
+button,
+input {
+  font-family: inherit;
+}
+
+.app {
+  min-height: 100vh;
+}
+
+/* =========================
+   NAVIGATION BAR
+========================= */
+
+.navbar {
+  background: #173b70;
+  color: white;
+  padding: 18px 7%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.navbar h2 {
+  margin: 0;
+  font-size: 23px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+}
+
+.nav-links a {
+  color: white;
+  font-size: 16px;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.nav-links a:hover {
+  color: #bfdbfe;
+}
+
+/* =========================
+   LOGIN AND REGISTER
+========================= */
+
+.auth-container {
+  min-height: 85vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px 20px;
+}
+
+.auth-card {
+  width: 100%;
+  max-width: 420px;
+  background: white;
+  padding: 35px;
+  border-radius: 14px;
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.08);
+}
+
+.auth-card h2 {
+  text-align: center;
+  color: #173b70;
+  margin-top: 0;
+  margin-bottom: 12px;
+}
+
+.auth-card p {
+  text-align: center;
+  color: #64748b;
+  line-height: 1.5;
+}
+
+.auth-card input {
+  display: block;
+  width: 100%;
+  padding: 13px;
+  margin-top: 16px;
+  border: 1px solid #cbd5e1;
+  border-radius: 7px;
+  font-size: 15px;
+  outline: none;
+}
+
+.auth-card input:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.12);
+}
+
+.auth-card button {
+  width: 100%;
+  padding: 13px;
+  margin-top: 22px;
+  background: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 7px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.auth-card button:hover {
+  background: #1d4ed8;
+}
+
+.auth-card button:disabled {
+  background: #94a3b8;
+  cursor: not-allowed;
+}
+
+.error-message {
+  color: #dc2626;
+  text-align: center;
+}
+
+.success-message {
+  color: #15803d;
+  text-align: center;
+}
+
+/* =========================
+   EXAM DASHBOARD
+========================= */
+
+.exam-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 35px 24px;
+}
+
+.exam-container h1 {
+  text-align: center;
+  color: #173b70;
+  margin-bottom: 35px;
+}
+
+.exam-grid {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(260px, 1fr)
+  );
+  gap: 24px;
+}
+
+.exam-card {
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.07);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.exam-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.exam-card h2 {
+  color: #173b70;
+  font-size: 21px;
+  margin-top: 0;
+}
+
+.exam-card p {
+  color: #475569;
+  line-height: 1.6;
+}
+
+.exam-card button {
+  background: #2563eb;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 7px;
+  cursor: pointer;
+  font-size: 15px;
+  margin-top: 10px;
+  transition: background 0.2s;
+}
+
+.exam-card button:hover {
+  background: #1d4ed8;
+}
+
+/* =========================
+   EXAM QUESTIONS PAGE
+========================= */
+
+.question-container {
+  min-height: 85vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 40px 20px;
+}
+
+.question-card {
+  width: 100%;
+  max-width: 700px;
+  padding: 30px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+}
+
+.question-card h1 {
+  color: #173b70;
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
+.question-card h2 {
+  color: #173b70;
+  text-align: center;
+}
+
+.question-card h3 {
+  color: #1e293b;
+  margin: 25px 0;
+  line-height: 1.6;
+  font-size: 19px;
+}
+
+.question-card p {
+  color: #64748b;
+  line-height: 1.6;
+}
+
+.question-card > p:first-of-type {
+  text-align: center;
+  background: #eff6ff;
+  padding: 10px;
+  border-radius: 7px;
+}
+
+/* Answer options */
+
+.option {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px;
+  margin: 12px 0;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  background: white;
+  color: #334155;
+  cursor: pointer;
+  transition: border-color 0.2s, background 0.2s;
+}
+
+.option:hover {
+  border-color: #2563eb;
+  background: #eff6ff;
+}
+
+.option input {
+  width: 17px;
+  height: 17px;
+  margin: 0;
+  flex-shrink: 0;
+  accent-color: #2563eb;
+  cursor: pointer;
+}
+
+/* Previous, Next and Submit buttons */
+
+.question-buttons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  margin-top: 30px;
+}
+
+.question-buttons button {
+  min-width: 110px;
+  padding: 12px 20px;
+  background: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 7px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.question-buttons button:hover:not(:disabled) {
+  background: #1d4ed8;
+}
+
+.question-buttons button:disabled {
+  background: #94a3b8;
+  cursor: not-allowed;
+}
+
+/* =========================
+   GENERAL PAGE ELEMENTS
+========================= */
+
+button:focus-visible,
+a:focus-visible,
+input:focus-visible {
+  outline: 2px solid #2563eb;
+  outline-offset: 3px;
+}
+
+.loading-message {
+  text-align: center;
+  padding: 40px;
+  color: #173b70;
+}
+
+/* =========================
+   RESPONSIVE DESIGN
+========================= */
+
+@media (max-width: 600px) {
+  .navbar {
+    flex-direction: column;
+    text-align: center;
+    padding: 18px 20px;
+  }
+
+  .navbar h2 {
+    font-size: 21px;
+  }
+
+  .nav-links {
+    gap: 18px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .auth-card {
+    padding: 25px;
+  }
+
+  .exam-container {
+    padding: 25px 16px;
+  }
+
+  .exam-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .question-container {
+    padding: 25px 16px;
+  }
+
+  .question-card {
+    padding: 22px 18px;
+  }
+
+  .question-card h3 {
+    font-size: 17px;
+  }
+
+  .question-buttons {
+    flex-wrap: wrap;
+  }
+
+  .question-buttons button {
+    flex: 1;
+    min-width: 100px;
+  }
+}
